@@ -14,8 +14,20 @@ public class Main {
 		System.out.print("Weight (kg): ");
 		double weight = scanner.nextDouble();
 		// FIXME:
-		double bmi = 0;
+		double bmi = weight / (height * height);
+
 		// TODO: 打印BMI值及结果
+		if (bmi <= 18.5) {
+			System.out.println("too low");	
+		}else if (bmi <= 25) {
+			System.out.println("normal");
+		}else if (bmi <= 28) {
+			System.out.println("over weight");
+		}else if (bmi <= 32) {
+			System.out.println("fat");
+		}else{	
+			System.out.println("too fat");
+		}
 	}
 
 }
