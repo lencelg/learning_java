@@ -10,13 +10,18 @@ public class Main {
 	public static void main(String[] args) {
 		String a = "12";
 		String b = "x9";
-		// TODO: 捕获异常并处理
 		int c = stringToInt(a);
 		int d = stringToInt(b);
 		System.out.println(c * d);
 	}
 
 	static int stringToInt(String s) {
-		return Integer.parseInt(s);
+		int i = 0;
+		try {
+			i = Integer.parseInt(s);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return i;
 	}
 }
